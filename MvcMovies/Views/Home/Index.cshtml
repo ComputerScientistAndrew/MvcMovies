@@ -1,0 +1,36 @@
+﻿@model IEnumerable<MvcMovies.Models.Movie>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <img src="~/Content/Images/logo.png" />
+    <p class="lead"><b>Your source for movies.</b></p>
+</div>
+
+<div class="row">
+    <h3>Top Picks</h3>
+    <table style="margin-top: 20px;">
+        <tr class="imageRow">
+            @foreach (var item in Model)
+            {
+            <td>
+                <a href="@Url.Action("Details","Movies", new { id = item.ID }, null)">
+                <img src="@item.ImagePath" height="300" />
+                </a>
+                
+            </td>
+            }
+        </tr>
+        <tr class="titleRow">
+            @foreach (var item in Model)
+            {
+            <td style="margin-top:10px;">
+                <img src="~/Content/Images/star-rating.jpg" height="20" /><span>@item.IMDb</span><br />
+                <a href="@Url.Action("Details","Movies", new { id = item.ID }, null)">@item.Title</a>
+            </td>
+            }
+        </tr>
+        
+    </table>
+</div>

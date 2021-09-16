@@ -1,0 +1,172 @@
+﻿p {
+    font-size: 16px;
+}
+
+a {
+    font-size: 16px;
+}
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.imageRow>td {
+    width: 300px;
+}
+
+.titleRow>td{
+    padding-top: 10px;
+    vertical-align: top;
+}
+.movieGrid {
+    font-size: 16px;
+}
+
+.ratingCol {
+    align-content:center;
+}
+
+
+.moviedetail_dialog {
+    padding: 20PX;
+    background-color: #fbfbfb;
+    border: 1px solid rgba(0,0,0,0.2);
+    box-shadow: 0 0 6px black;
+}
+
+.movieInfo_content {
+    width: 100px;
+}
+
+.ui-widget-header {
+    display: inline-block;
+    font-weight: bold;
+    margin-right: 20px;
+    font-size: 16px;
+}
+
+.lead {
+    color: white;
+    font-size: 50px;
+    
+}
+
+.moviedetail_dialog button {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.responsive-MovieDetails {
+    list-style: none;
+    margin-left: -41px;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.responsive-MovieDetails:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.UserDetailList {
+    margin-bottom: 5px;
+    margin: 0;
+}
+
+.UserDetailList:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.UserDetailHeader {
+    width: 118px;
+    float: left;
+    font-weight: bold;
+}
+
+
+.UserDetailHeader + span:before {
+    content: ":";
+    margin-right: 15px;
+    position: absolute;
+    left: -5px;
+}
+
+.UserDetailHeader + span {
+    float: left;
+    width: calc(100% - 118px);
+    padding-left: 10px;
+    position: relative;
+}
+
+.responsive-MovieDetails {
+    border: 1px solid black;
+    padding: 2px;
+    margin-left: 0;
+}
+
+.ui-dialog-titlebar-close {
+    padding: 0;
+    position: absolute;
+    right: .3em;
+    top: .3em;
+    width: 20px;
+    height: 20px;
+}
+
+.ui-dialog-titlebar-close:after {
+    content: '';
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    background-image: url(themes/base/images/ui-icons_777777_256x240.png);
+    background-position: -96px -128px;
+    background-repeat: no-repeat;
+}
+
+.watchColumn {
+    text-align:center;
+}
+
+.watchBtn {
+    width: 100px;
+}
+
+.toast-top-center {
+    top: 12px !important;
+    left: 50% !important;
+    margin-left: -150px !important;
+}
+
+#divProcessing {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -50px;
+    width: 300px;
+    height: 100px;
+    text-align: center;
+}

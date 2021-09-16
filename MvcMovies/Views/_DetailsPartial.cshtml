@@ -1,0 +1,23 @@
+﻿@model List<MvcMovies.ViewModels.PartialDetailViewModel>
+
+<ul class="responsive-MovieDetails">
+    @if (Model.Count() > 0)
+    {
+        foreach (var item in Model)
+        {
+            <li class="UserDetailList"><span class="UserDetailHeader">Title</span><span>@item.Title</span></li>
+            <li class="UserDetailList"><span class="UserDetailHeader">Director</span><span>@item.Director</span></li>
+            <li class="UserDetailList"><span class="UserDetailHeader">Release Date</span><span>@item.ReleaseDate.ToString("MM/dd/yyyy")</span></li>
+            <li class="UserDetailList"><span class="UserDetailHeader">Lead Role</span><span>@item.Actor</span></li>
+            <li class="UserDetailList"><span class="UserDetailHeader">Synopsis</span><span>@item.Synopsis</span></li>
+        }
+    }
+    else
+    {
+        <li class="NoData">No data found</li>
+    }
+</ul>
+
+@Html.ActionLink("See more", "Details", "Movies", new { id = Model.First().MovieId }, null)
+
+

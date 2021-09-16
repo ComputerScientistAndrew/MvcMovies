@@ -1,0 +1,45 @@
+﻿@model MvcMovies.ViewModels.FullDetailViewModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+@section Scripts {
+    <script src="~/Scripts/script.js" type="text/javascript"></script>
+}
+
+<h2><b>@Model.Title</b></h2>
+<p style="margin-top: 5px;">@Model.Rated | @Model.Genre | @Model.ReleaseDate.ToString("MMM dd, yyyy")</p>
+<button id="@Model.MovieId" value="@(Model.InWatchlist ? "True" : "False")" style="width: fit-content;"
+        class="btn addRemoveBtn watchBtn">
+    @(Model.InWatchlist ? "Remove From Watchlist" : "Add to Watchlist")
+</button>
+<hr />
+<table>
+    <tr>
+        <td><img src="@Model.Image" style="padding: 0px 10px;" height="315" /></td>
+        <td>
+            <iframe width="560"
+                    height="315"
+                    src="@Model.Trailer"
+                    frameborder="0"
+                    allowfullscreen></iframe>
+        </td>
+    </tr>
+</table>
+<div class="description" style="width: 800px;">
+    <p style="margin-top: 20px; font-size:medium;">@Model.Synopsis</p><br />
+    <p><b>Director: </b>@Model.Director</p>
+    <p><b>Production Company: </b>@Model.Production</p>
+    <p><b>Lead Actor: </b>@Model.Actor</p>
+</div><br />
+<div class="boxOffice">
+    <h3>Box Office</h3>
+    <p><b>Budget: </b>@(((int)Model.Budget).ToString("c0")) (estimated)</p>
+    <p><b>Opening Weekend USA: </b>@(((int)Model.OpeningWeekend).ToString("c0"))</p>
+    <p><b>Gross USA: </b>@(((int)Model.GrossUSA).ToString("c0"))</p>
+    <p><b>Cumulative World Gross: </b>@(((long)Model.GrossWorld).ToString("c0"))</p>
+</div><br />
+<p>
+    @Html.ActionLink("Back to Movies", "Index") 
+</p>
